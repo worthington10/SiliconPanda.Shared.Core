@@ -15,6 +15,14 @@ namespace SiliconPanda.Shared.Core.Tests.Convention
                 .OrderBy(t => t.Name)
                 .ToArray();
         }
+        protected Type[] GetPublicInterfacesFromApplicationAssembly(Predicate<Type> where)
+        {
+            return Assembly.Load(AssemblyName).GetExportedTypes()
+                .Where(t => t.IsInterface)
+                .Where(where.Invoke)
+                .OrderBy(t => t.Name)
+                .ToArray();
+        }
 
         private const string AssemblyName = "SiliconPanda.Shared.Core";
     }

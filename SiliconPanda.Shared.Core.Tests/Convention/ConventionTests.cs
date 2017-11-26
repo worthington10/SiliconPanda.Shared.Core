@@ -1,22 +1,20 @@
 ﻿using System.Linq;
 using NUnit.Framework;
+using SiliconPanda.Shared.Core.Convention;
 
 namespace SiliconPanda.Shared.Core.Tests.Convention
 {
     [TestFixture]
     public class ManagerTests : ConventionBase
     {
-        public void OnlyManagers_ShouldBeInTheManagerNamespace()
-        {
-            
-        }
-
+        [Test]
         public void AllManagers_ShouldHaveTheIManagerInterface()
         {
-        //    var allManagers = GetPublicClassesFromApplicationAssembly(c => c.Name.EndsWith("Manager"));
-        //    var allManagers = GetPublicClassesFromApplicationAssembly(c => c.Namespace.EndsWith("IManager"));
+            var allManagers = GetPublicClassesFromApplicationAssembly(c => c.Name.EndsWith("Manager"));
+            var allInterfaces = GetPublicClassesFromApplicationAssembly(c => c.GetInterfaces().Contains(typeof(IManager)));
 
-        //    allManagers.ToList().Should().Equal(registeredManagers, (ac, rc) => ac.Name == rc.Name);
+            Assert.AreEqual(allManagers.Length, allInterfaces.Length);
+            Assert.AreEqual(allManagers.Select(x => x.FullName), allInterfaces.Select(x => x.FullName));
         }
     }
 }

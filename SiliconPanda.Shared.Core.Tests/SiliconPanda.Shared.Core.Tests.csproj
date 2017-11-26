@@ -11,4 +11,8 @@
     <PackageReference Include="SiliconPanda.Shared.Domain" Version="1.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SiliconPanda.Shared.Core\SiliconPanda.Shared.Core.csproj" />
+  </ItemGroup>
+
 </Project>
