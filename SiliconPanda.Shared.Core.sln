@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiliconPanda.Shared.Core", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D302FDAA-519B-445D-AD2B-A7A0D263E94D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiliconPanda.Shared.Core.Tests", "SiliconPanda.Shared.Core.Tests\SiliconPanda.Shared.Core.Tests.csproj", "{CEFC5C79-7EE2-4886-8644-9F3A21A31F5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,9 +19,16 @@ Global
 		{5B549098-899D-4421-A2DB-649A33DDA327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B549098-899D-4421-A2DB-649A33DDA327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B549098-899D-4421-A2DB-649A33DDA327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEFC5C79-7EE2-4886-8644-9F3A21A31F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFC5C79-7EE2-4886-8644-9F3A21A31F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFC5C79-7EE2-4886-8644-9F3A21A31F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFC5C79-7EE2-4886-8644-9F3A21A31F5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CEFC5C79-7EE2-4886-8644-9F3A21A31F5E} = {D302FDAA-519B-445D-AD2B-A7A0D263E94D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34C7FF0B-DE31-44D1-8F6E-7F343086053D}
