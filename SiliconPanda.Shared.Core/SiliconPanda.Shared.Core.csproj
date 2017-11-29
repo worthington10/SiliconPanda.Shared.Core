@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NuGet.CommandLine" Version="4.4.1" />
     <PackageReference Include="SiliconPanda.Shared.Domain" Version="1.0.0" />
   </ItemGroup>
 

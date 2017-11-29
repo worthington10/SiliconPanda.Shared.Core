@@ -10,8 +10,5 @@ namespace SiliconPanda.Shared.Core.Filters
         public IEnumerable<Guid> IncludeTagIds { get; set; }
 
         public IEnumerable<Guid> ExcludeTagIds { get; set; }
-
-
-
     }
 }

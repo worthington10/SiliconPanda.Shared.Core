@@ -2,9 +2,8 @@
 {
     public enum LogType
     {
-        Informative,
-        Verbose,
-        Warning,
-        Alert
+        Informative = 0,
+        Warning = 1,
+        Error = 2
     }
 }
