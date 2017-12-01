@@ -1,0 +1,39 @@
+version: 1.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+branches:
+  only:
+  - master
+image: Visual Studio 2017 Preview
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+environment:
+  myget_apikey:
+    secure: ybhFOPHQZpLsHw1R066EawMS1i0bPymO88TphSzAuckcZzNjn/5lAIE075o3HMzt
+nuget:
+  account_feed: true
+  project_feed: true
+before_build:
+- cmd: >-
+    dotnet restore
+build:
+  project: SiliconPanda.Shared.Core
+  publish_nuget: true
+  publish_nuget_symbols: true
+  verbosity: normal
+test_script:
+- ps: ForEach ($folder in (Get-ChildItem -Path tests -Directory)) { dotnet test $folder.FullName }
+artifacts:
+- path: '**\*.nupkg'
+  name: NuGet
+deploy_script:
+- ps: >-
+    dotnet pack
+
+    dotnet nuget push **/*.nupkg -s https://www.myget.org/F/silicon_panda/api/v3/index.json -k $env:myget_apikey
