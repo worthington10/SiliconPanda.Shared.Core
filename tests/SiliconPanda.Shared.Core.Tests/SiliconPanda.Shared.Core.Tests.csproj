@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SiliconPanda.Shared.Core\SiliconPanda.Shared.Core.csproj" />
+    <ProjectReference Include="..\..\src\SiliconPanda.Shared.Core\SiliconPanda.Shared.Core.csproj" />
   </ItemGroup>
 
 </Project>
