@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiliconPanda.Shared.Core", "SiliconPanda.Shared.Core\SiliconPanda.Shared.Core.csproj", "{5B549098-899D-4421-A2DB-649A33DDA327}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiliconPanda.Shared.Core", "src\SiliconPanda.Shared.Core\SiliconPanda.Shared.Core.csproj", "{5B549098-899D-4421-A2DB-649A33DDA327}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D302FDAA-519B-445D-AD2B-A7A0D263E94D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiliconPanda.Shared.Core.Tests", "SiliconPanda.Shared.Core.Tests\SiliconPanda.Shared.Core.Tests.csproj", "{CEFC5C79-7EE2-4886-8644-9F3A21A31F5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiliconPanda.Shared.Core.Tests", "tests\SiliconPanda.Shared.Core.Tests\SiliconPanda.Shared.Core.Tests.csproj", "{CEFC5C79-7EE2-4886-8644-9F3A21A31F5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
